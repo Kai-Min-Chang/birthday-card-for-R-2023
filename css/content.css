@@ -1,13 +1,46 @@
+@font-face{
+    font-family: 'kevin-font';
+    src:    url('./font.woff')format('woff'),
+            url('./font.ttf')format('truetype');
+}
+
+@font-face{
+    font-family: 'simply-font';
+    src:    url('./simply-font.woff')format('woff'),
+            url('./simply-font.ttf')format('truetype');
+}
+
 .content{
+    font-family: 'simply-font';
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
     width: max-content;
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 600;
 }
+
+.content span:has(+br){
+    position: relative;
+    right: 5px;
+}
+
+.content br+span{
+    text-align: right;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    left: 5px;
+}
+
+.content-1 span,
+.content-19 span,
+.content-20 span{
+    font-size: 1.2em;
+}
+
 .content-end{
     width: 100%;
     padding: 0 20px;
@@ -15,7 +48,7 @@
 
 @media (min-width: 768px){
     .content{
-        font-size: 40px;
+        font-size: 46px;
     }
     
 }
@@ -55,5 +88,61 @@
     }
     100%{
         opacity: 1;
+    }
+}
+
+
+.bg{
+    background-image: url(../image/heart.svg);
+    background-size: contain;
+    position: absolute;
+    height: auto;
+    aspect-ratio: 1;
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation-duration: 1600ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.bg.active{
+    animation-name: bg;
+}
+
+.bg-1{
+    width: 80%;
+    max-width: 800px;
+    right: 0;
+    top: 10%;
+    transform: translateX(30%);
+    animation-delay: 0.5s;
+}
+
+.bg-2{
+    width: 40%;
+    max-width: 500px;
+    left: 0;
+    top: 53%;
+    transform: translateX(-40%);
+    animation-delay: 2s;
+}
+
+
+.bg-3{
+    width: 60%;
+    max-width: 600px;
+    right: 0;
+    top: 70%;
+    transform: translateX(35%);
+    animation-delay: 3s;
+}
+
+@keyframes bg {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.2;
     }
 }
