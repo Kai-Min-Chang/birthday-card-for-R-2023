@@ -18,7 +18,7 @@
     transform: translate(-50%, -50%);
     opacity: 0;
     width: max-content;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 600;
 }
 
@@ -35,9 +35,7 @@
     left: 5px;
 }
 
-.content-1 span,
-.content-19 span,
-.content-20 span{
+.content-1 span{
     font-size: 1.2em;
 }
 
@@ -50,7 +48,6 @@
     .content{
         font-size: 46px;
     }
-    
 }
 
 .content.active{
